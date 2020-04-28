@@ -1,0 +1,39 @@
+name: on_demand_food
+description: Starter kit for on demand food delivery app.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.5.2 <3.0.0"
+
+analyzer:
+  enable-experiment:
+    - control-flow-collections
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_svg: ^0.17.4
+  provider: ^4.0.2
+  flutter_sticky_header: ^0.4.0
+  flutter_widgets: ^0.1.9
+  avatar_glow: ^1.1.0
+  google_maps_flutter: ^0.5.26+4
+  geolocator: any
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/
+    - images/icons/
+    - images/category/
+    - images/items/
+    - images/locations/
