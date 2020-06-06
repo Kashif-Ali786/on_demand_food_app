@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
         title: 'On Demand Starter Restaurant Kit',
         routes: {
           '/': (context) => Login(),
-          '/address': (context) => Address(),
           '/home': (context) => Home(),
           '/edit_profile': (context) => EditProfile(),
           '/change_password': (context) => ChangePassword(),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:on_demand_food/constants.dart';
+import 'package:on_demand_food/pages/address.dart';
 import 'package:on_demand_food/pages/reset_password.dart';
 import 'package:on_demand_food/pages/create_account.dart';
 import 'package:on_demand_food/components/TextDivider.dart';
@@ -14,8 +15,12 @@ class _LoginState extends State<Login> {
   login(context) {
     Navigator.pushReplacementNamed(context, '/address');
   }
-
   bool showPassword = false;
+
+  toSearchLocation(context)
+  {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>GoogleMapClass()));
+  }
 
   toggleShowPassword() {
     setState(() {
@@ -101,7 +106,7 @@ class _LoginState extends State<Login> {
                   child: RaisedButton(
                     colorBrightness: Brightness.dark,
                     color: kPrimaryColor,
-                    onPressed: () => login(context),
+                    onPressed: () => toSearchLocation(context),
                     child: Text('LOG IN'),
                   ),
                 ),

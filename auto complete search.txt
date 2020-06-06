@@ -1,0 +1,22 @@
+Prediction p = await PlacesAutocomplete.show(
+                      context: context,
+                      apiKey: kGoogleApiKey,
+                      overlayBorderRadius: BorderRadius.circular(20),
+                      
+                      language: "en",
+                      components: [Component(Component.country, "pk")]);
+                  searchAddress = p.description;
+                  searchAndNavigate();
+
+
+
+
+
+
+
+FloatingActionButton(
+            onPressed:(){Navigator.push(context,
+              MaterialPageRoute(
+                  builder: (context) => PlacePicker(kGoogleApiKey)),);
+            child: Icon(Icons.location_on);}
+          ),

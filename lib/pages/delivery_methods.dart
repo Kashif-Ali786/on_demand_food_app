@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:on_demand_food/constants.dart';
 
-class DeliveryMethods extends StatelessWidget {
+class DeliveryMethods extends StatefulWidget {
+  @override
+  _DeliveryMethodsState createState() => _DeliveryMethodsState();
+}
+
+class _DeliveryMethodsState extends State<DeliveryMethods> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,14 +29,16 @@ class DeliveryMethods extends StatelessWidget {
               children: <Widget>[
                 ListTile(
                     title: Text(
-                  'When',
-                  style: kMainFontTextStyleLight,
-                )),
-                ListTile(
-                  selected: true,
-                  leading: Icon(Icons.timer),
-                  title: Text('As soon as possible'),
-                  trailing: Icon(Icons.check),
+                      'When',
+                      style: kMainFontTextStyleLight,
+                    )),
+                ListTileTheme(
+                  selectedColor: Theme.of(context).primaryColor,
+                  child: ListTile(
+                    leading: Icon(Icons.timer),
+                    title: Text('As soon as possible'),
+                    trailing: Icon(Icons.check),
+                  ),
                 ),
                 Divider(),
                 ListTile(
@@ -80,6 +87,6 @@ class DeliveryMethods extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
+
 }

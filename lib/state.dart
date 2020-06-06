@@ -4,6 +4,8 @@ class GlobalState extends ChangeNotifier {
   bool showSearchbar = false;
   int selectedOrderMethod = 0;
 
+  bool _selectedColor=false;
+
   //toggle search bar  on homepage
   toggleSearchbar() {
     showSearchbar = !showSearchbar;
